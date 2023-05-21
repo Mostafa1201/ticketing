@@ -3,6 +3,7 @@
 * This is a ticketing application developed using node js with micro-services.
 * The application is ran by kubernetes clusters
 * Skaffold is used for local development.
+* This application uses server side rendering through next js.
 
 # Installation
 
