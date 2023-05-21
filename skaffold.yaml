@@ -16,4 +16,12 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
+    - image: taher1201/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
+            dest: .
    
