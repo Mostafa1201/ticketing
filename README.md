@@ -4,6 +4,7 @@
 * The application is ran by kubernetes clusters
 * Skaffold is used for local development.
 * This application uses server side rendering through next js.
+* I have added a common module as an npm package that I will use to provide some common functions like authentication for the application services: https://www.npmjs.com/package/@mt_tickets/common.
 
 # Installation
 
