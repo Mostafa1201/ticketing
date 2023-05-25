@@ -24,4 +24,11 @@ build:
         manual:
           - src: '**/*.ts'
             dest: .
-   
+    - image: taher1201/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
