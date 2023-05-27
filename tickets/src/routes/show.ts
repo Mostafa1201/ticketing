@@ -1,5 +1,4 @@
-import { NotFoundError, requireAuth, validateRequest } from "@mt_tickets/common";
-import { body } from "express-validator";
+import { NotFoundError } from "@mt_tickets/common";
 import express, { Request, Response } from "express";
 import { Ticket } from "../models/ticket";
 
