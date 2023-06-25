@@ -10,6 +10,7 @@ interface TicketAttrs {
 export interface TicketDoc extends mongoose.Document {
   title: string;
   price: number;
+  version: number;
   isReserved(): Promise<boolean>;
 }
 
@@ -40,6 +41,7 @@ const TicketSchema = new mongoose.Schema(
   }
 );
 
+TicketSchema.set('versionKey','version');
 TicketSchema.statics.build = (attrs: TicketAttrs) => {
   return new Ticket({
     _id: attrs.id,
