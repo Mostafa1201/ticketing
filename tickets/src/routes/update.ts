@@ -3,6 +3,7 @@ import {
   validateRequest,
   NotFoundError,
   NotAuthorizedError,
+  BadRequestError,
 } from "@mt_tickets/common";
 import { body } from "express-validator";
 import express, { Request, Response } from "express";
@@ -26,6 +27,10 @@ router.put(
     const ticket = await Ticket.findById(req.params.id);
     if (!ticket) {
       throw new NotFoundError();
+    }
+
+    if(ticket.orderId){
+      throw new BadRequestError('Cannot edit a reserved ticket');
     }
 
     if (ticket.userId !== req.currentUser!.id) {
