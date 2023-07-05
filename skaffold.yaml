@@ -36,6 +36,10 @@ build:
       context: orders
       docker:
         dockerfile: Dockerfile
+    - image: taher1201/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
       sync:
         manual:
           - src: 'src/**/*.ts'
