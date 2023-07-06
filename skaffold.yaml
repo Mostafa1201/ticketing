@@ -36,8 +36,20 @@ build:
       context: orders
       docker:
         dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
     - image: taher1201/expiration
       context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+    - image: taher1201/payments
+      context: payments
       docker:
         dockerfile: Dockerfile
       sync:
