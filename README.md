@@ -20,6 +20,14 @@ After installing minikube you need to start the service and evaluate the env var
 minikube start
 eval (minikube docker-env)
 ```
+# Payments
+
+## Stripe
+
+In order to test with stripe , you can create an account in stripe and use the test mode.
+You will have a Publishable key and a secret key.
+
+payments in test mode are all free , you can use one of the test credit cards in stripe docs here: https://stripe.com/docs/testing
 
 
 
