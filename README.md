@@ -5,6 +5,9 @@
 * Skaffold is used for local development.
 * This application uses server side rendering through next js.
 * I have added a common module as an npm package that I will use to provide some common functions like authentication for the application services: https://www.npmjs.com/package/@mt_tickets/common.
+* To access the application go to: http://www.ticketing-app.com
+    * I have deployed the application to digitalocean and assigned a domain name to it.
+* When merging the code to master branch , Github workflows will get triggered.It will then build the project and deploy the changes to docker hub , finally digital ocean cluster will pull the latest changes that we just pushed and the application will be updated.  
 
 # Installation
 
